@@ -124,5 +124,14 @@ while game:
         win = True
     key = pygame.key.get_pressed()
     if key[pygame.K_RETURN] and pause: pause = False
+    if key[pygame.K_RETURN] and win:
+        score1 = 0
+        score2 = 0
+        ball.speed = 4
+        player.rect.x, player.rect.y = 0,h/2-50
+        player2.rect.x, player2.rect.y = w-50,h/2-50
+        ball.rect.x, ball.rect.y = w/2, h/2
+        ball.dx, ball.dy = 1,-1
+        win = False
     pygame.display.update()
     clock.tick(fps)
