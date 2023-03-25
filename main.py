@@ -104,10 +104,10 @@ while game:
         ball.rect.x, ball.rect.y = player.rect.right,h/2-16
         ball.dx, ball.dy = -1,-1
         pause = True
-    if score1 >= 2:
+    if score1 >= 15:
         sc.blit(win1_text, (w/2-150, h/2-40))
         win = True
-    if score2 >= 2:
+    if score2 >= 15:
         sc.blit(win2_text, (w/2-150, h/2-40))
         win = True
     key = pygame.key.get_pressed()
